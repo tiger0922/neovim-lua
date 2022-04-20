@@ -10,9 +10,10 @@ local options = {
   relativenumber = true,
   cursorline = true,
   expandtab = true,
-  tabstop = 2,
-  shiftwidth = 2,
-  swapfile = false, 
+  tabstop = 4,
+  shiftwidth = 4,
+  swapfile = false,
+  hidden = true
 }
 
 for k, v in pairs(options) do
@@ -20,4 +21,12 @@ for k, v in pairs(options) do
 end
 
 vim.cmd [[set formatoptions-=cro]]
-vim.cmd([[colorscheme gruvbox]])
+vim.cmd [[colorscheme gruvbox]]
+
+-- Set indentation based on filetype
+vim.cmd [[
+  autocmd FileType html setlocal ts=2 sts=2 sw=2
+  autocmd FileType css setlocal ts=2 sts=2 sw=2
+  autocmd FileType javascript setlocal ts=2 sts=2 sw=2
+  autocmd FileType lua setlocal ts=2 sts=2 sw=2
+]]
