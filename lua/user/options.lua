@@ -13,7 +13,8 @@ local options = {
   tabstop = 4,
   shiftwidth = 4,
   swapfile = false,
-  hidden = true
+  hidden = true,
+  mouse = "a",
 }
 
 for k, v in pairs(options) do

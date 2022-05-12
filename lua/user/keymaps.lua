@@ -20,6 +20,9 @@ keymap('i', 'jk', '<esc>', opts)
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
 
+-- Close quickfix
+keymap("n", "<leader>", ":cclose<CR>", opts)
+
 -- Telescope
 keymap('n', '<leader>ff', '<cmd>lua require("telescope.builtin").find_files()<CR>', opts)
 keymap('n', '<leader>fg', '<cmd>lua require("telescope.builtin").live_grep()<CR>', opts)
