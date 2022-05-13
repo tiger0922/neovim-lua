@@ -21,7 +21,7 @@ for k, v in pairs(options) do
   vim.opt[k] = v
 end
 
-vim.cmd [[set formatoptions-=cro]]
+vim.cmd [[autocmd VimEnter * setlocal formatoptions-=c formatoptions-=r formatoptions-=o]]
 vim.cmd [[colorscheme gruvbox]]
 
 -- Set indentation based on filetype
