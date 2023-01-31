@@ -22,12 +22,17 @@ for k, v in pairs(options) do
 end
 
 vim.cmd [[autocmd VimEnter * setlocal formatoptions-=c formatoptions-=r formatoptions-=o]]
-vim.cmd [[colorscheme gruvbox]]
+-- vim.cmd [[colorscheme gruvbox]]
+vim.cmd [[colorscheme catppuccin-macchiato]]
+-- vim.cmd [[colorscheme rose-pine]]
 
 -- Set indentation based on filetype
 vim.cmd [[
   autocmd FileType html setlocal ts=2 sts=2 sw=2
   autocmd FileType css setlocal ts=2 sts=2 sw=2
   autocmd FileType javascript setlocal ts=2 sts=2 sw=2
+  autocmd FileType typescript setlocal ts=2 sts=2 sw=2
+  autocmd FileType javascriptreact setlocal ts=2 sts=2 sw=2
+  autocmd FileType typescriptreact setlocal ts=2 sts=2 sw=2
   autocmd FileType lua setlocal ts=2 sts=2 sw=2
 ]]

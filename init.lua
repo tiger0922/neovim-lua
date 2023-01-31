@@ -10,3 +10,5 @@ require('user.telescope')
 require('user.bufferline')
 require('user.toggleterm')
 require('user.autopairs')
+require('user.gitsigns')
+vim.o.termguicolors = true

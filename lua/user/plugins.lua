@@ -44,7 +44,25 @@ return require('packer').startup(function(use)
     'nvim-telescope/telescope.nvim',
   }
 
+  -- Git
+  use "lewis6991/gitsigns.nvim"
+
   -- Gruvbox
   use { "ellisonleao/gruvbox.nvim" }
+  
+  -- Catppuccin
+  use { "catppuccin/nvim", as = "catppuccin" }
+  
+  -- Rose-pine
+  use({
+    'rose-pine/neovim',
+    as = 'rose-pine',
+    config = function()
+        require('rose-pine').setup({
+            dark_variant = 'moon'
+        })
+        vim.cmd('colorscheme rose-pine')
+    end
+  })
 
 end)
